@@ -4,9 +4,10 @@
  */
 
 /**
- * Modified by:
+ * Modified by: Alion Bujku
  * 
- * Brief summary of modifications:
+ * Brief summary of modifications: Removed the exit function in handle_signal
+ * in order to allow the function to continue even after the SIGINT kill functions.
  */
 
 
@@ -19,8 +20,7 @@
  * @brief Signal handler for SIGINT - prints a message and exits
  */
 void handle_signal() {
-    printf("Received a signal\n");
-    exit(1);
+    printf("Received a signal but won't leave!\n");
 }
 
 int main() {
